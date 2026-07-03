@@ -1,9 +1,4 @@
-// ---------- Boot loader (terminal intro) ----------
-// Types out a short boot log on a full-screen overlay, then wipes
-// away to reveal the site. Click/keypress fast-forwards it. Respects
-// prefers-reduced-motion by skipping straight to the site. Wrapped
-// in try/catch with a hard timeout fallback so a JS error can never
-// permanently trap the site behind the loader.
+// Terminal boot intro. Click/keypress skips it; respects prefers-reduced-motion.
 (() => {
   const bootLoader = document.getElementById('bootLoader');
   const bootLines = document.getElementById('bootLines');
@@ -66,8 +61,7 @@
 
     const finishBoot = () => {
       clearTimeout(safetyTimer);
-      // Force a reflow so the browser flushes the current state before
-      // the class change, guaranteeing the transition actually plays.
+      // Force reflow so the transition reliably plays.
       void bootLoader.offsetHeight;
       bootLoader.classList.add('is-hidden');
       document.documentElement.classList.remove('boot-lock');
@@ -99,8 +93,7 @@
   }
 })();
 
-// Skills marquee: pause the scroll while the user is hovering,
-// so tags can be read without racing past.
+// Pause the skills marquee on hover so tags can be read.
 const marquee = document.querySelector('.hero-marquee');
 const track = document.querySelector('.marquee-track');
 
@@ -122,14 +115,8 @@ if (marquee && track) {
   });
 }
 
-// ---------- Projects scroll-pin reveal (desktop only) ----------
-// The Projects section is a tall scroll region on desktop with a
-// position: sticky inner wrapper. As the user scrolls through that
-// extra height, we read progress (0 to 1) and reveal each card in
-// sequence: left card from the left, middle from the bottom, right
-// card from the right. Fully scroll-linked, so it reverses smoothly
-// if the user scrolls back up. Disabled on mobile/tablet, where the
-// cards just use the normal CSS fade-in instead.
+// Projects scroll-pin reveal (desktop only). Sticky section + scroll
+// progress reveals cards left/bottom/right in sequence; reverses on scroll up.
 (() => {
   const desktopQuery = window.matchMedia('(min-width: 921px)');
   const section = document.querySelector('.projects-scroll');
@@ -137,8 +124,7 @@ if (marquee && track) {
 
   if (!section || cards.length === 0) return;
 
-  // Reveal windows, as a fraction of the section's scroll progress (0–1).
-  // Each card animates in over its own [start, end] slice, then holds.
+  // Each card animates over its own [start, end] slice of scroll progress.
   const REVEAL_WINDOWS = {
     left:   { start: 0.05, end: 0.32 },
     bottom: { start: 0.38, end: 0.65 },
