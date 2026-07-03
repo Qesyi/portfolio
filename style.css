@@ -870,9 +870,7 @@ html.boot-lock body {
   animation-range: entry 0% cover 30%;
 }
 
-/* Same reveal, but timed to trigger around the vertical middle of the
-   viewport instead of near the bottom edge — used for the journey
-   cards so the alternating zigzag reads more dramatically. */
+/* Same reveal, timed to trigger near viewport middle (used on journey cards) */
 .reveal-mid {
   animation: reveal-in linear both;
   animation-timeline: view();
