@@ -985,6 +985,11 @@ html.boot-lock body {
     display: flex;
     align-items: center;
     overflow: hidden;
+    padding: 28px 0;
+  }
+
+  .projects-scroll .section-subtitle {
+    margin-bottom: 40px;
   }
 
   .projects-sticky .section-inner {
