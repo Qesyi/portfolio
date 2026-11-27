@@ -14,69 +14,63 @@
 <link rel="apple-touch-icon" href="favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=22">
 </head>
 <body>
 
-<div class="boot-loader" id="bootLoader">
-  <div class="boot-panel boot-panel-top" aria-hidden="true"></div>
-  <div class="boot-panel boot-panel-bottom" aria-hidden="true"></div>
-  <div class="boot-loader-inner">
-    <div class="boot-lines" id="bootLines"></div>
-  </div>
-</div>
-<noscript><style>.boot-loader { display: none !important; }</style></noscript>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 
-<div class="noise" aria-hidden="true"></div>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main">
+    <a class="logo" href="#hero">Ameer Aqasyah</a>
+    <ul>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
+  </nav>
+</header>
 
 <main>
 
   <section class="hero" id="hero">
-    <div class="hero-window reveal">
-      <div class="hero-titlebar">
-        <span class="dot dot-red"></span>
-        <span class="dot dot-yellow"></span>
-        <span class="dot dot-green"></span>
-        <!--<span class="hero-titlebar-label">ameer@portfolio — zsh</span>-->
+    <div class="hero-content reveal">
+      <p class="eyebrow">Software Engineer</p>
+      <h1 class="hero-name">Ameer Aqasyah</h1>
+      <p class="hero-role">Front-end leaning, backend capable — I build and ship real products end to end.</p>
+
+      <div class="hero-marquee" aria-label="Skills and tools">
+        <div class="marquee-track">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">React</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">Java</span>
+          <span class="tag">Flask</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag" aria-hidden="true">HTML</span>
+          <span class="tag" aria-hidden="true">CSS</span>
+          <span class="tag" aria-hidden="true">JavaScript</span>
+          <span class="tag" aria-hidden="true">TypeScript</span>
+          <span class="tag" aria-hidden="true">Python</span>
+          <span class="tag" aria-hidden="true">React</span>
+          <span class="tag" aria-hidden="true">Tailwind CSS</span>
+          <span class="tag" aria-hidden="true">Java</span>
+          <span class="tag" aria-hidden="true">Flask</span>
+          <span class="tag" aria-hidden="true">PostgreSQL</span>
+        </div>
       </div>
-      <div class="hero-window-body">
-        <p class="eyebrow">$ whoami</p>
-        <h1 class="hero-name">Ameer Aqasyah<span class="cursor">_</span></h1>
-        <p class="hero-role">Software Engineer — front-end leaning, backend capable</p>
 
-        <div class="hero-cmd">
-          <p class="hero-cmd-label">$ skills</p>
-          <div class="hero-marquee" aria-label="Skills and tools">
-            <div class="marquee-track">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">Python</span>
-              <span class="tag">React</span>
-              <span class="tag">Tailwind CSS</span>
-              <span class="tag" aria-hidden="true">HTML</span>
-              <span class="tag" aria-hidden="true">CSS</span>
-              <span class="tag" aria-hidden="true">JavaScript</span>
-              <span class="tag" aria-hidden="true">TypeScript</span>
-              <span class="tag" aria-hidden="true">Python</span>
-              <span class="tag" aria-hidden="true">React</span>
-              <span class="tag" aria-hidden="true">Tailwind CSS</span>
-            </div>
-          </div>
-        </div>
+      <p class="hero-edu">Bachelor of Software Engineering · Moscow Aviation Institute · 2022–2026</p>
 
-        <div class="hero-cmd">
-          <p class="hero-cmd-label">$ cat education.txt</p>
-          <p class="hero-edu-title">Bachelor of Software Engineering</p>
-          <p class="hero-edu-meta">Moscow Aviation Institute • 2021 – 2026</p>
-        </div>
-
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View projects</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
-        </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View projects</a>
+        <a href="#contact" class="btn-link">Get in touch <span class="chevron" aria-hidden="true">→</span></a>
       </div>
     </div>
 
@@ -91,25 +85,32 @@
 
   <section class="section" id="journey">
     <div class="section-inner">
-      <!--<p class="section-eyebrow reveal">git log --graph --author=ameer</p>-->
       <h2 class="section-title reveal">My journey</h2>
-      <p class="section-subtitle reveal">From discovering programming to where i am now.</p>
+      <p class="section-subtitle reveal">From discovering programming to where I am now.</p>
 
       <ol class="timeline">
           <li class="timeline-entry reveal-mid">
           <article class="timeline-card">
+            <p class="timeline-year">2026 — Present</p>
+            <h3 class="timeline-title">Educator &amp; Program Developer</h3>
+            <p class="timeline-org">Lumina AI School, Ipoh</p>
+            <p class="timeline-desc">Teaching coding and robotics to students aged 6–17 across Pictoblox, Blockly, Python, C++ and Java, plus adult classes on AI-assisted work and no-code tools. Designed the school's Java curriculum and built gamified courses ahead of the first student cohort.</p>
+          </article>
+        </li>
+          <li class="timeline-entry reveal-mid">
+          <article class="timeline-card">
             <p class="timeline-year">2026</p>
             <h3 class="timeline-title">Graduated — Software Engineering</h3>
-            <p class="timeline-org">Moscow Aviation Institute</p>
+            <p class="timeline-org">Moscow Aviation Institute · CGPA 4.2/5</p>
             <p class="timeline-desc">Successfully completed my Bachelor's degree. Built plenty of "okay" projects along the way (a few still unfinished), and if nothing else, thoroughly mastered the art of talking to a computer.</p>
           </article>
         </li>
           <li class="timeline-entry reveal-mid">
           <article class="timeline-card">
-            <p class="timeline-year">2021</p>
-            <h3 class="timeline-title">Began Software Engineering</h3>
-            <p class="timeline-org">Moscow Aviation Institute</p>
-            <p class="timeline-desc">Awarded a scholarship to study Software Engineering in Russia. This is where the real learning happened: the do's and don'ts, sleepless nights fixing bugs, and side projects outside the curriculum just to keep sharpening the craft.</p>
+            <p class="timeline-year">2021 — 2022</p>
+            <h3 class="timeline-title">Began the journey to Russia</h3>
+            <p class="timeline-org">University Kuala Lumpur (MIAT)</p>
+            <p class="timeline-desc">Awarded a scholarship to study Software Engineering in Russia. Spent a year on the Pre-Russian Programme in Malaysia preparing for it, then continued on to Moscow Aviation Institute — where the real learning happened: the do's and don'ts, sleepless nights fixing bugs, and side projects outside the curriculum just to keep sharpening the craft.</p>
           </article>
         </li>
           <li class="timeline-entry reveal-mid">
@@ -135,7 +136,6 @@
   <section class="section projects-scroll" id="projects">
     <div class="projects-sticky">
       <div class="section-inner">
-        <!--<p class="section-eyebrow reveal">ls ./projects</p>-->
         <h2 class="section-title reveal">Projects</h2>
         <p class="section-subtitle reveal">A collection of my recent work and side projects.</p>
 
@@ -143,7 +143,6 @@
         <div class="project-grid">
 
           <article class="project-card reveal" data-dir="left">
-            <div class="project-thumb" aria-hidden="true">{ }</div>
             <div class="project-card-top">
               <span class="project-index">01</span>
               <div class="project-links">
@@ -151,8 +150,8 @@
                 <a href="https://nomster.ameeraqasyah.dev/" class="project-link" aria-label="View live demo" target="_blank" rel="noopener">live</a>
               </div>
             </div>
-            <h3 class="project-title">Nomster — real-time restaurant swipe-match</h3>
-            <p class="project-desc">Two-phone app for deciding where to eat — swipe a shared deck of nearby restaurants, get a live match the instant you both say yes.</p>
+            <h3 class="project-title">Nomster - real-time restaurant swipe-match</h3>
+            <p class="project-desc">Two-phone app for deciding where to eat - swipe a shared deck of nearby restaurants, get a live match the instant you both say yes.</p>
             <ul class="tag-list tag-list-sm">
               <li class="tag">JavaScript</li>
               <li class="tag">Supabase</li>
@@ -161,14 +160,13 @@
           </article>
 
           <article class="project-card reveal" data-dir="bottom">
-            <div class="project-thumb" aria-hidden="true">{ }</div>
             <div class="project-card-top">
               <span class="project-index">02</span>
               <div class="project-links">
                 <a href="https://github.com/Qesyi/fyp" class="project-link" aria-label="View code on GitHub" target="_blank" rel="noopener">code</a>
               </div>
             </div>
-            <h3 class="project-title">есть что есть — AI recipe finder</h3>
+            <h3 class="project-title">Есть что Есть - AI recipe finder</h3>
             <p class="project-desc">Upload a photo of your ingredients and a YOLOv8 model I fine-tuned myself (91.4% mAP50) detects what's there, then pulls real recipes for what you can actually cook.</p>
             <ul class="tag-list tag-list-sm">
               <li class="tag">Python</li>
@@ -178,14 +176,18 @@
           </article>
 
           <article class="project-card reveal" data-dir="right">
-            <div class="project-thumb" aria-hidden="true">{ }</div>
             <div class="project-card-top">
               <span class="project-index">03</span>
+              <div class="project-links">
+                <a href="https://javamasta.vercel.app/" class="project-link" aria-label="View live demo" target="_blank" rel="noopener">live</a>
+              </div>
             </div>
-            <h3 class="project-title">$ building_next_one.sh</h3>
-            <p class="project-desc">Something new is cooking — not ready to show yet. Check back soon.</p>
+            <h3 class="project-title">Java Architect - gamified Java learning platform</h3>
+            <p class="project-desc">A React app with 40 Java lessons for school students - XP, stars and sticker rewards, separate student and teacher views, with progress synced to Google Sheets through a Google Apps Script backend.</p>
             <ul class="tag-list tag-list-sm">
-              <li class="tag tag-muted">coming soon</li>
+              <li class="tag">React</li>
+              <li class="tag">Google Apps Script</li>
+              <li class="tag">Google Sheets</li>
             </ul>
           </article>
 
@@ -197,57 +199,39 @@
   <section class="section" id="contact">
     <div class="contact-center">
       <div class="section-inner">
-        <div class="term-window reveal">
-          <div class="term-titlebar">
-            <span class="dot dot-red"></span>
-            <span class="dot dot-yellow"></span>
-            <span class="dot dot-green"></span>
+        <div class="contact-grid reveal">
+          <div class="contact-panel">
+            <span class="eyebrow">Contact</span>
+            <h3 class="contact-heading">Let's connect.</h3>
+            <p class="contact-lead">Reach out, or find me elsewhere online.</p>
+
+            <div class="contact-row">
+              <a href="resume.pdf" download class="btn btn-primary">Download resume</a>
+              <a href="mailto:ameer.aqasyah19@gmail.com" class="contact-email-text">ameer.aqasyah19@gmail.com</a>
+            </div>
           </div>
-          <div class="term-window-body">
-            <p class="cmd-label">$ contact --info</p>
-            <h2 class="term-title">Let's connect</h2>
 
-            <div class="cmd-block">
-              <p class="cmd-label">$ location --current</p>
-              <p class="cmd-value-row"><span class="pin" aria-hidden="true">&#128205;</span> Seri Iskandar, Perak</p>
-            </div>
-
-            <div class="cmd-block">
-              <p class="cmd-label">$ contact --email</p>
-              <a href="mailto:ameer.aqasyah19@gmail.com" class="cmd-value-box">ameer.aqasyah19@gmail.com</a>
-            </div>
-
-            <div class="cmd-block">
-              <p class="cmd-label">$ resume --download</p>
-              <a href="resume.pdf" download class="cmd-value-box">Download résumé (PDF)</a>
-            </div>
-
-            <div class="cmd-block">
-              <p class="cmd-label">$ ls ./social-links</p>
-              <div class="social-grid">
-                <a href="https://github.com/Qesyi" target="_blank" rel="noopener noreferrer" class="social-card">
-                  <span class="social-icon">GH</span>
-                  <span class="social-text">
-                    <span class="social-name">GitHub</span>
-                    <span class="social-handle">Qesyi</span>
+          <div class="contact-card-col">
+            <div class="card-stage" id="card-stage">
+              <div class="bizcard" id="bizcard" role="button" tabindex="0" aria-label="Business card for Ameer Aqasyah. Press Enter to flip it over; tab to a link on the back to open it.">
+                <span class="bc bc-front">
+                  <small>Software Engineer</small>
+                  <span>
+                    <span class="bc-name">Ameer Aqasyah</span>
+                    <span class="bc-line">ameer.aqasyah19@gmail.com</span>
                   </span>
-                </a>
-                <a href="https://www.linkedin.com/in/ameer-aqasyah" target="_blank" rel="noopener noreferrer" class="social-card">
-                  <span class="social-icon">in</span>
-                  <span class="social-text">
-                    <span class="social-name">LinkedIn</span>
-                    <span class="social-handle">Ameer Aqasyah</span>
+                </span>
+                <span class="bc bc-back">
+                  <small>Elsewhere</small>
+                  <span class="bc-links">
+                    <a class="bc-line" href="https://github.com/Qesyi" target="_blank" rel="noopener noreferrer">GitHub &middot; Qesyi</a>
+                    <a class="bc-line" href="https://www.linkedin.com/in/ameer-aqasyah" target="_blank" rel="noopener noreferrer">LinkedIn &middot; Ameer Aqasyah</a>
+                    <a class="bc-line" href="https://www.instagram.com/ameerxqasyah/" target="_blank" rel="noopener noreferrer">Instagram &middot; @ameerxqasyah</a>
                   </span>
-                </a>
-                <a href="https://www.instagram.com/ameerxqasyah/" target="_blank" rel="noopener noreferrer" class="social-card">
-                  <span class="social-icon">IG</span>
-                  <span class="social-text">
-                    <span class="social-name">Instagram</span>
-                    <span class="social-handle">@ameerxqasyah</span>
-                  </span>
-                </a>
+                </span>
               </div>
             </div>
+            <p class="card-hint" aria-hidden="true">Tilt it, click to flip</p>
           </div>
         </div>
       </div>
@@ -260,6 +244,6 @@
 
 </main>
 
-<script src="script.js?v=3"></script>
+<script src="script.js?v=15"></script>
 </body>
 </html>
