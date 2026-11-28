@@ -249,7 +249,14 @@ if (marquee && track) {
   const update = () => {
     ticking = false;
     const hideFrom = projects.getBoundingClientRect().top + window.scrollY - 1;
-    const showFrom = contact.getBoundingClientRect().top + window.scrollY - 1;
+    // Contact's natural offset can sit past the page's actual max scroll
+    // position when it's the last section and shorter than one viewport
+    // (true on mobile, where Projects isn't scroll-jacked and the whole
+    // page is much shorter) — scrollY could then never reach it, leaving
+    // the nav hidden forever. Clamp to the real max scroll so "show again
+    // at Contact" always has a reachable threshold.
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const showFrom = Math.min(contact.getBoundingClientRect().top + window.scrollY - 1, maxScroll);
     const y = window.scrollY;
     header.classList.toggle('nav-hidden', y >= hideFrom && y < showFrom);
   };

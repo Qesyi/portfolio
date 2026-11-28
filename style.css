@@ -1146,7 +1146,10 @@ a.bc-line:focus-visible {
 
   .hero {
     min-height: auto;
-    padding-top: 40px;
+    /* Clears the fixed/floating nav pill (~70px tall, floating 14px from
+       the top) with room to spare — the nav never reserves document-flow
+       space since it's position:fixed, so content has to clear it itself. */
+    padding-top: 120px;
   }
 
   .scroll-indicator {
@@ -1155,6 +1158,7 @@ a.bc-line:focus-visible {
 
   #contact.section {
     min-height: auto;
+    padding-top: 110px;
   }
 
   .contact-panel {
